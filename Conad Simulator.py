@@ -109,13 +109,13 @@ def stabilize(n_registers, duration, p):
             cont = 5
     print "Stabilized at iteration %d" % iteration
     print "Mean: %lf" % total_mean
-    p10 = np.percentile(medie, 10)
-    p90 = np.percentile(medie, 90)
+    p10 = np.percentile(means, 10)
+    p90 = np.percentile(means, 90)
     print "10° percentile: %lf" % p10
     print "90° percentile: %lf" % p90
-    plt.plot([i for i in xrange(len(totale))], totale, "rx")
+    plt.plot([i for i in xrange(len(total))], total, "rx")
     plt.hold(True)
-    plt.axhline(y = media_totale, color = "black", linestyle = "--")
+    plt.axhline(y = total_mean, color = "black", linestyle = "--")
     plt.ylabel("Mean E(Tw)")
     plt.xlabel("Iteration")
     plt.legend(["Mean of means"], loc = 4)
@@ -131,7 +131,7 @@ def repeated_measures(n_registers, duration, values, p):
         simulator = ConadSimulator(n_registers, (values[0] + j) * duration, values[0] * duration)
         simulator.start()
         total_mean = np.mean(simulator.tw)
-        results.append(x)
+        results.append(total_mean)
         if total_mean >= values[2] and total_mean <= values[3]:
             inside += 1
         else:
@@ -147,7 +147,7 @@ def repeated_measures(n_registers, duration, values, p):
     plt.xlabel("Experiments")
     plt.legend(["Tw", "Mean", "P10", "P90"])
     plt.show()
-    if fuori <= 0.1 * p:
+    if outside <= 0.1 * p:
         print "Validated!"
         return True
     else:
@@ -155,7 +155,7 @@ def repeated_measures(n_registers, duration, values, p):
         return False
 
 values = stabilize(5, 1000, 100)
-repeated_measures(5, 1000, valori, 100)
+repeated_measures(5, 1000, values, 100)
 #simulator = ConadSimulator(5, 1000)
 #simulator.start()
 #simulator.statistics()
