@@ -1,5 +1,5 @@
 #ConadSimulator
-##A Discrete-Event Simulator of a CONAD supermarket
+##A discrete-event simulator of a CONAD supermarket
 
 ###Overview
 This is made for a university project. Our aim is to create a discrete-event simulator to model a CONAD supermarket and analyse some variables of interest (like the mean waiting time). Below there is the full text of the assigment (in italian).
