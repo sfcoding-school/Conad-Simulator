@@ -53,8 +53,6 @@ class ConadSimulator:
                 self.ti.append(c_ti)
             yield self.env.timeout(c_ti)
     def statistics(self):
-        print
-        print
         print "####################################"
         print "###         Statistics           ###"
         print "####################################"
@@ -154,8 +152,8 @@ def repeated_measures(n_registers, duration, values, p):
         print "Not validated..."
         return False
 
-values = stabilize(5, 1000, 100)
-repeated_measures(5, 1000, values, 100)
-#simulator = ConadSimulator(5, 1000)
-#simulator.start()
-#simulator.statistics()
+#values = stabilize(5, 1000, 100)
+#repeated_measures(5, 1000, values, 100)
+simulator = ConadSimulator(5, 10000)
+simulator.start()
+simulator.statistics()
