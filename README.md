@@ -1,4 +1,4 @@
-#ConadSimulator
+#Conad Simulator
 ##A discrete-event simulator of a CONAD supermarket
 
 ###Overview
