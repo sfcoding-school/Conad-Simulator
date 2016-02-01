@@ -5,7 +5,7 @@
 This is made for a university project. Our aim is to create a discrete-event simulator to model a CONAD supermarket and analyse some variables of interest (like the mean waiting time). Below there is the full text of the assigment (in italian).
 
 Il gestore del vostro supermercato (CONAD) ha problemi per determinare il numero di cassiere da avere in uno dei periodi di maggiore affluenza.
-Poiché tua madre di lagna spesso delle attese alla cassa e ti ha sfidato a mettere in pratica la tua preparazione sulla teoria delle code, tu ti incarichi del compito di aiutare il gestore.
+Poiché tua madre si lagna spesso delle attese alla cassa e ti ha sfidato a mettere in pratica la tua preparazione sulla teoria delle code, tu ti incarichi del compito di aiutare il gestore.
 Decidi quindi – a causa della complessità di decisione e di diniego, dell’abilità di aggiungere o togliere cassiere  (che incrementano o decrementano il μ di canale) e altre complessità – di simulare il modello di sistema.
 Sviluppa il modello di simulazione e implementalo nel linguaggio che tu desideri.
 Tenta di stimare, a partire da tue reali osservazioni su alcuni sabati mattina, i modelli di arrivo e di servizio, così come la disciplina delle code.
